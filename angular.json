@@ -17,6 +17,7 @@
             "polyfills": [
               "zone.js"
             ],
+            "outputPath": "dist/IsmailFakir-portfolio",
             "tsConfig": "tsconfig.app.json",
             "assets": [
               {
@@ -108,6 +109,9 @@
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
             ]
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
