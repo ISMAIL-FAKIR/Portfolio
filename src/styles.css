@@ -1,1 +1,77 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  background-color: #1c1c1c;
+  color: #f0f0f0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.main-content {
+  margin-left: 80px;
+  padding: 50px;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* === Animations globales === */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.9); opacity: 0; }
+  60% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease forwards;
+  opacity: 0;
+}
+
+.animate-bounce {
+  animation: bounceIn 0.6s ease forwards;
+  opacity: 0;
+}
+
+.fade-delay-1 { animation-delay: 0.3s; }
+.fade-delay-2 { animation-delay: 0.5s; }
+.fade-delay-3 { animation-delay: 0.7s; }
+
+
+@media (max-width: 768px) {
+  .main-content,
+  .projects-container,
+  .about-container,
+  .experience-container,
+  .contact-container {
+    padding: 2rem 1rem;
+    margin-left: 13px !important;
+  }
+
+  .sidebar {
+    display: none; /* à remplacer plus tard par un burger si tu veux */
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .btn, .btn-outline {
+    width: 100%;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-block,
+  .contact-form {
+    width: 100%;
+  }
+}

@@ -1,0 +1,29 @@
+<div class="contact-container">
+  <h2 class="animate-fade-in">Contactez-moi</h2>
+
+  <div class="contact-content">
+    <!-- Bloc infos -->
+    <div class="contact-info">
+      <p><i class="bi bi-envelope-fill"></i> liamsirikaf8&#64;gmail.com</p>
+      <p><i class="bi bi-telephone-fill"></i> +33 7 84 98 47 08</p>
+      <p>
+        <i class="bi bi-linkedin"></i>
+        <a href="https://www.linkedin.com/in/ismail-fakir-if01" target="_blank">
+          linkedin.com/in/ismail-fakir-if01
+        </a>
+      </p>
+    </div>
+
+    <!-- Séparateur "OU" -->
+    <div class="separator">OU</div>
+
+    <!-- Bloc formulaire -->
+    <form class="contact-form" (ngSubmit)="onSubmit()" #contactForm="ngForm">
+      <input type="text" name="name" [(ngModel)]="formData.name" placeholder="Votre nom" required />
+      <input type="email" name="email" [(ngModel)]="formData.email" placeholder="Votre email" required />
+      <textarea name="message" [(ngModel)]="formData.message" placeholder="Votre message" required></textarea>
+      <button type="submit">Envoyer</button>
+      <p *ngIf="successMessage" class="success">{{ successMessage }}</p>
+    </form>
+  </div>
+</div>
